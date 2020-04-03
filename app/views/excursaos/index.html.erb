@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Excursaos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Partida</th>
+      <th>Chegada</th>
+      <th>Qtdveiculos</th>
+      <th>Destino</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @excursaos.each do |excursao| %>
+      <tr>
+        <td><%= excursao.nome %></td>
+        <td><%= excursao.partida %></td>
+        <td><%= excursao.chegada %></td>
+        <td><%= excursao.qtdveiculos %></td>
+        <td><%= excursao.destino %></td>
+        <td><%= link_to 'Show', excursao %></td>
+        <td><%= link_to 'Edit', edit_excursao_path(excursao) %></td>
+        <td><%= link_to 'Destroy', excursao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Excursao', new_excursao_path %>

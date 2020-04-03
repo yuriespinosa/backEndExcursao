@@ -1,0 +1,42 @@
+<%= form_with(model: excursao, local: true) do |form| %>
+  <% if excursao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(excursao.errors.count, "error") %> prohibited this excursao from being saved:</h2>
+
+      <ul>
+        <% excursao.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :partida %>
+    <%= form.date_select :partida %>
+  </div>
+
+  <div class="field">
+    <%= form.label :chegada %>
+    <%= form.date_select :chegada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qtdveiculos %>
+    <%= form.number_field :qtdveiculos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :destino %>
+    <%= form.text_field :destino %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

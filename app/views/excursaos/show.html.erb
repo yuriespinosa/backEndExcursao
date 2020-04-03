@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @excursao.nome %>
+</p>
+
+<p>
+  <strong>Partida:</strong>
+  <%= @excursao.partida %>
+</p>
+
+<p>
+  <strong>Chegada:</strong>
+  <%= @excursao.chegada %>
+</p>
+
+<p>
+  <strong>Qtdveiculos:</strong>
+  <%= @excursao.qtdveiculos %>
+</p>
+
+<p>
+  <strong>Destino:</strong>
+  <%= @excursao.destino %>
+</p>
+
+<%= link_to 'Edit', edit_excursao_path(@excursao) %> |
+<%= link_to 'Back', excursaos_path %>

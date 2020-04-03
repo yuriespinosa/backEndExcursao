@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @veiculo.nome %>
+</p>
+
+<p>
+  <strong>Limite passageiro:</strong>
+  <%= @veiculo.limite_passageiro %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @veiculo.valor %>
+</p>
+
+<%= link_to 'Edit', edit_veiculo_path(@veiculo) %> |
+<%= link_to 'Back', veiculos_path %>
